@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static "css/variables.less" %}"/>
+    <link rel="stylesheet" href="{% static "css/bootswatch.less" %}"/>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/homepage">mhelvey</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="/homepage/about">About Me</a></li>
+                <li><a href="/homepage/education">Education</a></li>
+                <li><a href="/homepage/experience">Experience</a></li>
+                <li><a href="/homepage/adventures">Adventures</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <main>
+        {% block banner %}
+        <img src="{% static "images/paris.jpg" %}" class="img-responsive" alt="Responsive image">
+        {% endblock %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">
+                    {% block right_content %}
+                    <img src="{% static "images/me.jpg" %}" alt="..." class="img-rounded img_thumbnail">
+                    {% endblock %}
+                </div>
+                <div class="col-md-10">
+                    {% block main_content %}
+                    <h1>About Me</h1>
+                    <ul>
+                        <li>Your mom</li>
+                        <li>Nothing here yet</li>
+                    </ul>
+                    {% endblock %}
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+</html>
