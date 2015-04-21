@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{%  block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/panorama.css' %}"/>
+
+{% endblock %}
 
 {% block banner %}
     {% for image in images %}
         <div class="gallery">
-            <img src="{% static image.file_path %}" class="img-responsive" alt="Responsive image">
-            <span> {{ image.title }}</span>
+            <span> {{ image.description }}</span>
+            <img src="{% static image.file_path %}" class="img-responsive" alt="Responsive image"/>
         </div>
     {% endfor %}
 {#    <div>#}
@@ -32,3 +36,8 @@
 
 {% endblock %}
 
+{% block custom_js %}
+    <script type="text/javascript" src="{% static 'js/panorama_plugin.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/panorama.js' %}"></script>
+
+{% endblock %}

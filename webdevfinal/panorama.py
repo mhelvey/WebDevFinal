@@ -38,6 +38,46 @@ for name in names:
         image.save()
         print("Image " + image.title + " created")
 
+image = hmod.Panorama.objects.get(title='hawaii')
+image.description = 'Ko Olina Beach'
+image.save()
 
-new = hmod.Panorama.objects.get(title='byutrack')
-print(new.filename)
+image = hmod.Panorama.objects.get(title='hawaii2')
+image.description = 'Hawaiian Coast'
+image.save()
+
+image = hmod.Panorama.objects.get(title='byutrack')
+image.description = 'BYU track'
+image.save()
+
+image = hmod.Panorama.objects.get(title='volley')
+image.description = 'Smith Fieldhouse'
+image.save()
+
+image = hmod.Panorama.objects.get(title='wyoming1')
+image.description = 'Fremont Lake, WY'
+image.save()
+
+image = hmod.Panorama.objects.get(title='wyoming2')
+image.description = 'Half Moon Lake, WY'
+image.save()
+
+image = hmod.Panorama.objects.get(title='paris2')
+image.description = 'Paris from Arc de Triomphe'
+image.save()
+
+image = hmod.Panorama.objects.get(title='paris3')
+image.description = 'Musée du Louvre'
+image.save()
+
+image = hmod.Panorama.objects.get(title='powell')
+image.description = 'Houseboat in Lake Powell'
+image.save()
+
+image = hmod.Panorama.objects.get(title='powell2')
+image.description = 'Lake Powell'
+image.save()
+
+image = hmod.Panorama.objects.get(title='beach')
+image.description = 'Carmel Beach, CA'
+image.save()
