@@ -2,6 +2,7 @@ import datetime
 from django.shortcuts import render, render_to_response
 from django.template import Context, loader
 from django.http import HttpResponse
+from homepage import models as hmod
 from django import forms
 import os.path
 
@@ -34,9 +35,10 @@ def experience(request):
     return HttpResponse(t.render(c))
 
 def adventures(request):
+    images = hmod.Panorama.objects.all()
     t = l.get_template('adventures.html')
     c = Context({
-
+        'images': images
     })
 
     return HttpResponse(t.render(c))
