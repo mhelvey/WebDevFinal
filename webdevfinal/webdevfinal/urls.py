@@ -5,6 +5,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'webdevfinal.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    url(r'^homepage/contact', 'homepage.views.contact'),
     url(r'^homepage/education', 'homepage.views.education'),
     url(r'^homepage/experience', 'homepage.views.experience'),
     url(r'^homepage/about', 'homepage.views.base'),

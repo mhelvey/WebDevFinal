@@ -42,3 +42,11 @@ def adventures(request):
     })
 
     return HttpResponse(t.render(c))
+
+def contact(request):
+    t = l.get_template('contact.html')
+    c = Context({
+
+    })
+
+    return HttpResponse(t.render(c))

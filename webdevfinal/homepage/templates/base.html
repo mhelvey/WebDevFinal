@@ -3,11 +3,14 @@
 <head lang="en">
     {% load staticfiles %}
     <meta charset="UTF-8">
-    <title>Homepage</title>
+{% block title %}
+    <title>About Me</title>
+{% endblock %}
     <link rel="stylesheet" href="{% static "css/variables.less" %}"/>
     <link rel="stylesheet" href="{% static "css/bootswatch.less" %}"/>
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
     <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     {%  block custom_css %}
     {% endblock %}
 
@@ -31,12 +34,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li><a href="/homepage/about">About Me</a></li>
+                <li><a href="/homepage/adventures">Adventures</a></li>
                 <li><a href="/homepage/education">Education</a></li>
                 <li><a href="/homepage/experience">Experience</a></li>
-                <li><a href="/homepage/adventures">Adventures</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Contact</a></li>
+                <li><a href="/homepage/contact">Contact</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -57,8 +60,13 @@
                     {% block main_content %}
                     <h1>About Me</h1>
                     <ul>
-                        <li>Your mom</li>
-                        <li>Nothing here yet</li>
+                        <li>Born and raised in the Bay Area</li>
+                        <Li>Spent two years in France and Belgium on a church service mission</Li>
+                        <li>BYU Student in the Marriott School of Management</li>
+                        <li>Happily married</li>
+                        <li>Dad to a beautiful baby girl</li>
+                        <li>NBA fanatic</li>
+                        <li>Star Wars nerd</li>
                     </ul>
                     {% endblock %}
                 </div>

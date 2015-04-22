@@ -8,3 +8,4 @@ class Panorama(models.Model):
     mime_type = models.TextField(max_length=25)
     title = models.TextField(max_length=40)
     description = models.TextField(null=True, max_length=400)
+    maps = models.TextField(null=True, max_length=4000)
