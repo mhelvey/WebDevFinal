@@ -1,0 +1,33 @@
+.thumbnail {
+  max-width: 195px;
+  max-height: 195px;
+}
+.gallery span {
+  display: none;
+  opacity: 0;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-size: 20px;
+}
+.gallery span.display-span {
+  transition: all .3s ease;
+  display: inline;
+  position: absolute;
+  background-color: black;
+  width: auto;
+  color: white;
+  z-index: 3;
+  text-align: center;
+  opacity: 0.8;
+  box-shadow: 0px 0px 10px 10px black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.gallery a {
+  background-color: transparent;
+  border: solid;
+  border-width: thin;
+  border-color: #4CAF50;
+  font-size: 15px;
+  color: #4CAF50;
+}

@@ -11,7 +11,14 @@
 
         $(this).hover(function(){
             $(this).children("span").toggleClass("display-span");
+
         });
+
+        //$(this).mouseenter(function(){
+        //
+        //    $(this).children("span").addClass("display-span");
+        //
+        //});
 
         //$(this).hover()
         //    .children("img").toggleClass("rollover", 100);
